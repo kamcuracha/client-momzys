@@ -8280,3 +8280,10 @@ body.rtl .region-social-top ul {
   float: right;
   margin: 0;
 }
+.footer-title {
+  color: #119c49;
+}
+.footer-title-emp {
+  color: #fcd208;
+  font-weight: 300;
+}

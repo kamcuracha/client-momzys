@@ -75,7 +75,8 @@ lessc[] = lessc/config.less
 lessc[] = lessc/megamenu.less
 lessc[] = lessc/color.less
 lessc[] = lessc/quicksettings.less
-lessc[] = lessc/style-rtl.less 
+lessc[] = lessc/style-rtl.less
+lessc[] = lessc/custom.less
 
 scripts[] = assets/js/jollyness.js 
 
