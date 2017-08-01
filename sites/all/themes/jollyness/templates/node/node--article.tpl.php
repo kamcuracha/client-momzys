@@ -106,7 +106,6 @@
           <?php if (isset($blog_categories)):?>
           <span><i class="fa fa-tag"></i><?php print $blog_categories;?></span>
           <?php endif;?>
-          <span><i class="fa fa-comment"></i> <?php print $comment_count;?> Comments</span>
       </div><!-- end post-meta -->
   </div>
   <!-- End title blog region detail mode!-->
@@ -117,22 +116,5 @@
   </div>
   <!-- End short body region full mode!-->
   
-  <!-- Begin short body region full mode!-->
-  <div class="authorbox_wrapper clearfix">
-      <?php print $user_picture; ?>
-      <h4>Posted by <?php print $name;?></h4>
-      <p>
-      <?php 
-        $uid = user_load($node->uid);
-        if (module_exists('profile2')) {  
-          $profile = profile2_load_by_user($uid, 'main');
-          if (isset($profile->field_bio[$node->language][0]['value'])) {
-            print ($profile->field_bio[$node->language][0]['value']);
-          }
-        }
-        ?>  
-      </p>
-  </div>
-  <!-- End short body region full mode!-->
 </div>
 <?php print render($content['comments']); ?>

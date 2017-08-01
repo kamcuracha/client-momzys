@@ -8280,11 +8280,27 @@ body.rtl .region-social-top ul {
   float: right;
   margin: 0;
 }
+.slider-desc {
+  text-align: center;
+}
+.get-started-block {
+  background: url('/sites/all/themes/jollyness/assets/images/Backyard-Barbecue.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 120px 0px;
+}
 .recipe {
   list-style-type: none;
 }
 .proportion-section {
-  background-image: url('/sites/all/themes/jollyness/assets/images/Hot-Scotch-Bonnet-Peppers-3.jpg');
+  background: url('/sites/all/themes/jollyness/assets/images/Hot-Scotch-Bonnet-Peppers-3.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.proportion-section .col-sm-4 {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 21px;
+  font-weight: 600;
+  padding: 0 0 20px;
+  text-align: center;
 }
 .view-tesminomials {
   text-align: center;

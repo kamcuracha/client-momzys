@@ -92,34 +92,21 @@
                 <h3><?php print ($node->title);?></h3>    
             </div>
             <?php print render($content['body']);?>
-            <div class="price1">
-                <span class="price1-old"></span>
-                <span class="price1-new">
-                    <?php print render($content['product:commerce_price']);?>
-                </span>
-                <span class="price1-tax"></span>
-                <span class="reward">
-                    <small></small>
-                </span>
-            </div>
             <?php print render($content['field_product']);?>
-            <div class="clearfix"></div>
-            <?php if (!$has_sidebar) :?>
-            <hr>
-            <div class="product-details-wrap dexp_tab_wrapper">
+		</div>
+	    
+		<?php if (module_exists('comment')): ?>
+		<div class="col-sm-12">
+			<div class="product-details-wrap dexp_tab_wrapper">
                 <ul class="nav nav-tabs" id="myTab">
-                    <li class="active"><a data-toggle="tab" href="#Description">Description</a></li>
-                    <li class="">
+                    <li class="active">
                         <a data-toggle="tab" href="#Reviews">Reviews (<?php print $comment_count;?>)</a>
                     </li>
                 </ul>
 
                 <div class="tab-content" id="myTabContent">
-                    <div id="Description" class="tab-pane fade active in">
-                        <?php print render($content['body']);?>                                
-                    </div><!-- col-tab pane -->
 
-                    <div id="Reviews" class="tab-pane fade">
+                    <div id="Reviews" class="tab-pane active fade in">
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <?php print render($content['comments']); ?>
                         </div> <!-- end col-12 -->
@@ -127,30 +114,7 @@
                     </div><!-- end tab pane review -->
                 </div><!-- end  tab content -->
             </div>
-            <?php endif; ?>
-       </div>
+		</div>
+		<?php endif; ?>
     </div>
-    <?php if ($has_sidebar) :?>
-    <hr>
-    <div class="product-details-wrap dexp_tab_wrapper">
-        <ul class="nav nav-tabs" id="myTab">
-            <li class="active"><a data-toggle="tab" href="#Description">Description</a></li>
-            <li class="">
-                <a data-toggle="tab" href="#Reviews">Reviews (<?php print $comment_count;?>)</a>
-            </li>
-        </ul>
-
-        <div class="tab-content" id="myTabContent">
-            <div id="Description" class="tab-pane fade active in">
-                <?php print render($content['body']);?>                                
-            </div><!-- col-tab pane -->
-
-            <div id="Reviews" class="tab-pane fade">
-                <?php print render ($content['comments']); ?>
-                <div class="clearfix"></div>
-            </div><!-- end tab pane review -->
-        </div><!-- end  tab content -->
-    </div>
-    <?php endif; ?>
 </div>
-<hr>
